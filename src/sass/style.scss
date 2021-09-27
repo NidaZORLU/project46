@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+//Mixins
+@mixin transitionEffect($par){
+  transition: $par all;
+  -webkit-transition: $par all;
+  -moz-transition: $par all;
+  -o-transition: $par all;
+}
+@mixin centerFlex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//color
+$bg-color-1 :#b8c6db;
+$bg-color-2: #f5f7fa;
+$bg-color-3: rgba(100, 100, 100, 0.1);
+$bg-color-4:#fff;
+$bg-color-5:#8e44ad;
+$bg-color-6:#732d91;
+$bg-color-7:#5e3370;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color:$bg-color-1;
+  background-image: linear-gradient(315deg, $bg-color-1 0%, $bg-color-2 100%);
+  font-family: 'Poppins', sans-serif;
+  @include centerFlex;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.quiz-container {
+  background-color: $bg-color-4;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px $bg-color-3;
+  width: 600px;
+  overflow: hidden;
+}
+.quiz-header {
+  padding: 4rem;
+}
+h2 {
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+ul li label {
+  cursor: pointer;
+}
+button {
+  background-color:$bg-color-5;
+  color: $bg-color-4;
+  border: none;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 1.3rem;
+}
+
+button:hover {
+  background-color: $bg-color-6;
+}
+
+button:focus {
+  outline: none;
+  background-color: $bg-color-7;
+}
